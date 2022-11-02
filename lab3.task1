@@ -1,0 +1,20 @@
+food_dict = {
+    "Россия" : ["A"],
+    "Португалия" : ["B"],
+    "Франция" : ["C"],
+    "Дания" : ["C"],
+    "Египет" : ["A"],
+    "Турция" : ["B"]
+}
+k=0
+n = input()
+flag = False
+for i in food_dict:
+    if n in food_dict[i]:
+        flag = True
+        print (i)
+        k+=1
+if flag == False:
+    print("Страна не найдена")
+
+print(k)

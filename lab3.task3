@@ -1,0 +1,26 @@
+studs = []
+with open("./venv/task123456", "r") as f:
+    for luffy in f:
+        sex = luffy.split(" ")[0]
+        name = luffy.split(" ")[1]
+        result = luffy.split(" ")[2]
+        studs.append({"sex":sex, "name":name, "result": int(result)})
+
+def byRes(x):
+    return x["result"]
+studs.sort(key=byRes)
+
+print(studs)
+
+flagm = False
+flagf = False
+
+for dude in studs:
+    if dude["sex"]=="m":
+        flagm = True
+        print("Лучший в мире", dude)
+        if flagm == True: break
+    if dude["sex"]=="f":
+        flagf = True
+        print("Лучшая в мире", dude)
+        if flagf == True: break
